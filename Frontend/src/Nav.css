@@ -1,0 +1,280 @@
+.top {
+  background: #183c29;
+  color: #e8f0e8;
+}
+
+.top-in {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+  letter-spacing: .2px;
+}
+
+.top-in span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-mid {
+  color: #c5d5c5;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #e9eee8;
+  box-shadow: 0 4px 18px #173d2908;
+}
+
+.nav-in {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #1e3b2a;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+}
+
+.logo > span:last-child > span {
+  color: #75a36a;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: #e9f2e5;
+  color: #2d7044;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.links a {
+  position: relative;
+  padding: 8px 0;
+  color: #56685b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: .3s ease;
+}
+
+.links a:hover,
+.links a.active {
+  color: #2d7947;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  background: #78a86b;
+  transition: .3s ease;
+}
+
+.links a:hover::after,
+.links a.active::after {
+  right: 0;
+}
+
+.search {
+  min-width: 190px;
+  max-width: 260px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+  border: 1px solid #e4eae2;
+  border-radius: 30px;
+  background: #f8faf7;
+  color: #748378;
+}
+
+.search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #263b2d;
+  font-size: 13px;
+}
+
+.search input::placeholder {
+  color: #9aa59b;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-icons button,
+.menu {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #284b34;
+  transition: .3s ease;
+}
+
+.nav-icons button:hover {
+  color: #77a66b;
+  transform: translateY(-2px);
+}
+
+.nav-icons button span {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 17px;
+  height: 17px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #79a96d;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-in {
+    gap: 15px;
+  }
+
+  .links {
+    gap: 18px;
+  }
+
+  .search {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 720px) {
+  .top-in {
+    min-height: 32px;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .top-mid,
+  .top-in span:last-child {
+    display: none;
+  }
+
+  .nav-in {
+    min-height: 72px;
+    gap: 10px;
+  }
+
+  .menu {
+    display: grid;
+    flex-shrink: 0;
+  }
+
+  .logo {
+    margin-right: auto;
+    font-size: 23px;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 25px 20px;
+    background: #fff;
+    box-shadow: 0 15px 25px #183c2918;
+  }
+
+  .links.active {
+    display: flex;
+  }
+
+  .links a {
+    padding: 13px 0;
+    border-bottom: 1px solid #edf0eb;
+  }
+
+  .search {
+    position: absolute;
+    top: 82px;
+    left: 17px;
+    right: 17px;
+    display: none;
+  }
+
+  .nav-icons {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-icons {
+    gap: 0;
+  }
+}
+
+.nav-icons .bag-link {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  color: #284b34;
+  transition: .3s ease;
+}
+.nav-icons .bag-link:hover { color: #77a66b; transform: translateY(-2px); }
+.nav-icons .bag-link span {
+  position: absolute; top: -2px; right: -2px; min-width: 17px; height: 17px;
+  display: grid; place-items: center; border-radius: 50%; background: #79a96d;
+  color: #fff; font-size: 10px; font-weight: 700;
+}
